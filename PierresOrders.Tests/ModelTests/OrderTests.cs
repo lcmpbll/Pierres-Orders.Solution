@@ -144,6 +144,17 @@ namespace PierresOrders.Tests
 
         Assert.AreEqual(1, result);
       }
+      [TestMethod]//13
+      public void Find_ReturnsCorrectOrder_Order()
+      {
+        Order newOrder1 = new Order("Bakery Order", 360, "11/23/33", "Dan's Corner Store");
+        Order newOrder2 = new Order("Pastry Order", 360, "11/23/33", "Dan's Corner Store");
+
+        Order result = Order.Find(2);
+
+        Assert.AreEqual(newOrder2, result);
+
+      }
 
 
   }

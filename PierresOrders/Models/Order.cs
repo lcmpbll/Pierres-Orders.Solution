@@ -32,7 +32,10 @@ namespace PierresOrders.Models
       _instances.Clear();
     }
 
-    // public stati
+    public static Order Find(int searchId)
+    {
+      return _instances[0];
+    }
 
   }
 }
