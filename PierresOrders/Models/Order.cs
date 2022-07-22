@@ -19,7 +19,7 @@ namespace PierresOrders.Models
       Date =_date;
       Title = _title;
       _instances.Add(this);
-      Id = 10;
+      Id = _instances.Count;
     }
 
     public static List<Order> GetAll()
