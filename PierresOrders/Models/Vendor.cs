@@ -8,7 +8,7 @@ namespace PierresOrders.Models
 
     public Vendor(string _name)
     {
-      Name = "TestVendor";
+      Name = _name;
     }
 
   }
