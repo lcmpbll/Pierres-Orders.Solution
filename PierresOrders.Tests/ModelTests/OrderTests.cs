@@ -39,6 +39,7 @@ namespace PierresOrders.Tests
         Order newOrder = new Order(description);
         //Act
         string updatedDescription = "Pastry Order";
+        newOrder.Description = updatedDescription;
         string result = newOrder.Description;
         //Assert
         Assert.AreEqual(updatedDescription, result);
