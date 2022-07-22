@@ -55,19 +55,19 @@ namespace PierresOrders.Tests
       Vendor newVendor2 = new Vendor("name2", "description2");
       List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2};
       List<Vendor> result = Vendor.GetAll();
-      // List<Vendor> result = Vendor.GetAll();
-      foreach (Vendor thisVendor in result)
-      {
-        Console.WriteLine("output from result" + thisVendor.Description);
-      }
-      foreach (Vendor thisVendor in newList)
-      {
-        Console.WriteLine("output from newList" + thisVendor.Description);
-      }
-
+      
       CollectionAssert.AreEqual(newList, result);
     }
-    
+    [TestMethod] //6
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      Vendor newVendor1 = new Vendor("name", "description");
+      Vendor newVendor2 = new Vendor("name2", "description2");
+
+      Vendor result = Vendor.Find(2);
+
+      Assert.AreEqual(newVendor2, result);
+    }
 
 
   }
