@@ -135,6 +135,15 @@ namespace PierresOrders.Tests
 
         CollectionAssert.AreEqual(newList, result);
       }
+      [TestMethod]//12
+      public void GetId_OrdersInstantiatedWithAnIdAndGetterReturns_Int()
+      {
+        Order newOrder1 = new Order("Bakery Order", 360, "11/23/33", "Dan's Corner Store");
+
+        int result = newOrder1.Id;
+
+        Assert.AreEqual(1, result);
+      }
 
 
   }
