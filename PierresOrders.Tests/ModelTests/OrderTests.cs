@@ -102,6 +102,19 @@ namespace PierresOrders.Tests
 
         Assert.AreEqual(result, newOrder.Title);
       }
+       [TestMethod]//9
+      public void SetTitle_ReturnsUpdatedTitle_string()
+      {
+        //Arrange
+        string title = "Mary's Patisserie";
+        Order newOrder = new Order("Pastry Order", 300, "11/2/44", title);
+        //Act
+        string updatedTitle = "Suzie Baker";
+        newOrder.Title = updatedTitle;
+        string result = updatedTitle;
+        //Assert
+        Assert.AreEqual(result, newOrder.Title);
+      }
 
 
   }
