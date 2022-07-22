@@ -3,10 +3,11 @@ namespace PierresOrders.Models
   public class Order
   {
     public string Description { get; set; }
+    
 
-    public Order(string description)
+    public Order(string _description)
     {
-      Description = description;
+      Description = _description;
     }
   }
 }
