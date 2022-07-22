@@ -17,7 +17,7 @@ namespace PierresOrders.Tests
     [TestMethod] //1
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("Test", 1);
+      Order newOrder = new Order("Test", 1, "2");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
     [TestMethod] //2
@@ -25,7 +25,7 @@ namespace PierresOrders.Tests
     {
       //Arrange
       string description = "Bread Order";
-      Order newOrder = new Order(description, 1);
+      Order newOrder = new Order(description, 1, "2");
       //Act
       string result = newOrder.Description;
       //Assert
@@ -36,7 +36,7 @@ namespace PierresOrders.Tests
       {
         //Arrange
         string description = "Bread Order";
-        Order newOrder = new Order(description, 1);
+        Order newOrder = new Order(description, 1, "2");
         //Act
         string updatedDescription = "Pastry Order";
         newOrder.Description = updatedDescription;
@@ -49,7 +49,7 @@ namespace PierresOrders.Tests
       {
         //Arrange
         int price = 300;
-        Order newOrder = new Order("BreadOrder", price);
+        Order newOrder = new Order("BreadOrder", price, "2");
         //Act
         int result = newOrder.Price;
         //Assert
@@ -61,13 +61,23 @@ namespace PierresOrders.Tests
       {
         //Arrange
         int price = 300;
-        Order newOrder = new Order("BreadOrder", price);
+        Order newOrder = new Order("BreadOrder", price, "2");
         //Act
         int updatedPrice = 200;
         newOrder.Price = updatedPrice;
         int result = updatedPrice;
         //Assert
         Assert.AreEqual(result, newOrder.Price);
+      }
+      [TestMethod]//6
+      public void GetDate_ReturnsDate_String()
+      {
+        string date = "12/01/23";
+        Order newOrder = new Order("Bread Order", 300, date);
+
+        string result = date;
+
+        Assert.AreEqual(result, newOrder.Date);
       }
 //     [TestMethod]
 // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
