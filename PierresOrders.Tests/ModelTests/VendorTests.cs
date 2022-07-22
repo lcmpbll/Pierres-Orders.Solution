@@ -6,12 +6,12 @@ using PierresOrders.Models;
 namespace PierresOrders.Tests
 {
   [TestClass]
-  public class VendorTests //: IDisposable
+  public class VendorTests : IDisposable
   {
-    // public void Dispose()
-    // {
-    //   Vendor.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
 
     [TestMethod]//1
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
@@ -46,7 +46,7 @@ namespace PierresOrders.Tests
 
       int result = newVendor.Id;
 
-      Assert.AreEqual(0, result);
+      Assert.AreEqual(1, result);
     }
     [TestMethod]
     public void GetAll_ReturnsAllVendorObjects_Vendor()
@@ -54,8 +54,16 @@ namespace PierresOrders.Tests
       Vendor newVendor1 = new Vendor("name", "description");
       Vendor newVendor2 = new Vendor("name2", "description2");
       List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2};
-
       List<Vendor> result = Vendor.GetAll();
+      // List<Vendor> result = Vendor.GetAll();
+      foreach (Vendor thisVendor in result)
+      {
+        Console.WriteLine("output from result" + thisVendor.Description);
+      }
+      foreach (Vendor thisVendor in newList)
+      {
+        Console.WriteLine("output from newList" + thisVendor.Description);
+      }
 
       CollectionAssert.AreEqual(newList, result);
     }
