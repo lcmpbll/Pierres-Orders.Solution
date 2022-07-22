@@ -17,7 +17,7 @@ namespace PierresOrders.Tests
     [TestMethod] //1
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("Test", 1, "2");
+      Order newOrder = new Order("Test", 1, "2", "title");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
     [TestMethod] //2
@@ -25,7 +25,7 @@ namespace PierresOrders.Tests
     {
       //Arrange
       string description = "Bread Order";
-      Order newOrder = new Order(description, 1, "2");
+      Order newOrder = new Order(description, 1, "2", "title");
       //Act
       string result = newOrder.Description;
       //Assert
@@ -36,7 +36,7 @@ namespace PierresOrders.Tests
       {
         //Arrange
         string description = "Bread Order";
-        Order newOrder = new Order(description, 1, "2");
+        Order newOrder = new Order(description, 1, "2", "title");
         //Act
         string updatedDescription = "Pastry Order";
         newOrder.Description = updatedDescription;
@@ -49,7 +49,7 @@ namespace PierresOrders.Tests
       {
         //Arrange
         int price = 300;
-        Order newOrder = new Order("BreadOrder", price, "2");
+        Order newOrder = new Order("BreadOrder", price, "2", "title");
         //Act
         int result = newOrder.Price;
         //Assert
@@ -61,7 +61,7 @@ namespace PierresOrders.Tests
       {
         //Arrange
         int price = 300;
-        Order newOrder = new Order("BreadOrder", price, "2");
+        Order newOrder = new Order("BreadOrder", price, "2", "title");
         //Act
         int updatedPrice = 200;
         newOrder.Price = updatedPrice;
@@ -73,7 +73,7 @@ namespace PierresOrders.Tests
       public void GetDate_ReturnsDate_String()
       {
         string date = "12/01/23";
-        Order newOrder = new Order("Bread Order", 300, date);
+        Order newOrder = new Order("Bread Order", 300, date, "title");
 
         string result = date;
 
@@ -84,13 +84,23 @@ namespace PierresOrders.Tests
       {
         //Arrange
         string date = "12/22/30";
-        Order newOrder = new Order("BreadOrder", 300, date);
+        Order newOrder = new Order("BreadOrder", 300, date, "title");
         //Act
         string updatedDate = "1/22/33";
         newOrder.Date = updatedDate;
         string result = updatedDate;
         //Assert
         Assert.AreEqual(result, newOrder.Date);
+      }
+      [TestMethod]//8
+      public void GetTitle_ReturnsTitle_String()
+      {
+        string title = "Mary's Patisserief";
+        Order newOrder = new Order("Bread Order", 300, "11/2/22", title);
+
+        string result = title;
+
+        Assert.AreEqual(result, newOrder.Title);
       }
 
 
