@@ -48,6 +48,17 @@ namespace PierresOrders.Tests
 
       Assert.AreEqual(0, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_Vendor()
+    {
+      Vendor newVendor1 = new Vendor("name", "description");
+      Vendor newVendor2 = new Vendor("name2", "description2");
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2};
+
+      List<Vendor> result = Vendor.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
+    }
     
 
 

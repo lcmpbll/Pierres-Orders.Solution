@@ -17,5 +17,10 @@ namespace PierresOrders.Models
       Id = _instances.Count;
     }
 
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
+
   }
 }
