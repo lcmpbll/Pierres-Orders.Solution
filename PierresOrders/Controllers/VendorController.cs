@@ -5,7 +5,8 @@ using PierresOrders.Models;
 
 namespace PierresOrders.Controllers
 {
-  public class VendorController : Controller{
+  public class VendorController : Controller
+  {
 
     [HttpGet("/vendors")]
     public ActionResult Index()
@@ -34,8 +35,23 @@ namespace PierresOrders.Controllers
       Vendor selectedVendor = Vendor.Find(id);
       List<Order> vendorOrders = selectedVendor.Orders;
       model.Add("vendor", selectedVendor);
-      model.Add("order", vendorOrders);
+      model.Add("orders", vendorOrders);
       return View(model);
+    }
+
+    [HttpPost("/vendors/{vendorId}/orders")]
+    public ActionResult Create(int vendorId, string orderDescription, int orderPrice, string orderDate, string orderTitle)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor foundVendor = Vendor.Find(vendorId);
+      Order newOrder = new Order(orderDescription, orderPrice, orderDate, orderTitle);
+      foundVendor.AddOrder(newOrder);
+      List<Order> vendorOrders = foundVendor.Orders;
+      
+      model.Add("vendor", foundVendor);
+      model.Add("orders", vendorOrders);
+      return View("Show", model);
+
     }
 
 
