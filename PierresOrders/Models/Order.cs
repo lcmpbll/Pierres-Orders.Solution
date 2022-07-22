@@ -1,6 +1,6 @@
-namespace ProjectName.Models
+namespace PierresOrders.Models
 {
-  public class ClassName
+  public class Order
   {
     // properties, constructors, methods, etc. go here
   }

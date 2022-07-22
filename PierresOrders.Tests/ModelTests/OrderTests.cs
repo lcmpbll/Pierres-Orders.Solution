@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectName;
+using PierresOrders;
 
-namespace ProjectName.Tests
+namespace PierresOrders.Tests
 {
   [TestClass]
-  public class ClassNameTests
+  public class OrderTests
   {
 //     [TestMethod]
 // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()

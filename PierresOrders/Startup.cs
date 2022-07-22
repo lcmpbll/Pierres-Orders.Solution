@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ProjectName
+namespace PierresOrders
 {
   public class Startup
   {
@@ -32,6 +32,8 @@ namespace ProjectName
       {
         routes.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
       });
+
+      
 
       app.Run(async (context) =>
       {
