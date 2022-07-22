@@ -1,7 +1,15 @@
+using System.Collections.Generic;
+
 namespace PierresOrders.Models
 {
   public class Vendor
   {
-    // properties, constructors, methods, etc. go here
+    public string Name { get; set; }
+
+    public Vendor(string _name)
+    {
+      Name = "TestVendor";
+    }
+
   }
 }
