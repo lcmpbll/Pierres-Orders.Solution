@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using ProjectName.Models;
+using PierresOrders.Models;
 
 namespace PierresOrders.Controllers
 {
