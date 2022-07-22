@@ -10,7 +10,7 @@ namespace PierresOrders.Models
     public Vendor(string _name, string _description)
     {
       Name = _name;
-      Description = "Baked goods seller";
+      Description = _description;
     }
 
   }
