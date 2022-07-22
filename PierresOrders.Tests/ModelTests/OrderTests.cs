@@ -1,11 +1,25 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PierresOrders;
+using PierresOrders.Models;
 
 namespace PierresOrders.Tests
 {
   [TestClass]
   public class OrderTests
   {
+    // [TestMethod]
+    // public class OrderTests : IDisposable
+    // {
+    //   public void Dispose()
+    //     {
+    //       Order.ClearAll();
+    //     }
+    // }
+    [TestMethod]
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
+    {
+      Order newOrder = new Order("Test");
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
 //     [TestMethod]
 // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
 // {

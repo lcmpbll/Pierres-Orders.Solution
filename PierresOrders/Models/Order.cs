@@ -2,6 +2,11 @@ namespace PierresOrders.Models
 {
   public class Order
   {
-    // properties, constructors, methods, etc. go here
+    public string Description { get; set; }
+
+    public Order(string description)
+    {
+      Description = description;
+    }
   }
 }
