@@ -14,11 +14,22 @@ namespace PierresOrders.Tests
     //       Order.ClearAll();
     //     }
     // }
-    [TestMethod]
+    [TestMethod] //1
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
       Order newOrder = new Order("Test");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+    [TestMethod] //2
+    public void GetDescription_ReturnsDescription_String()
+    {
+      //Arrange
+      string description = "Bread Order";
+      Order newOrder = new Order(description);
+      //Act
+      string result = newOrder.Description;
+      //Assert
+      Assert.AreEqual(description, result);
     }
 //     [TestMethod]
 // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
