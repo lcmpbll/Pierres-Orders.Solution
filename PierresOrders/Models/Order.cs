@@ -11,7 +11,7 @@ namespace PierresOrders.Models
     {
       Description = _description;
       Price = _price;
-      Date = "2";
+      Date =_date;
     }
   }
 }
