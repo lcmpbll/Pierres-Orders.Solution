@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace PierresOrders.Models
 {
   public class Order
@@ -6,6 +8,7 @@ namespace PierresOrders.Models
     public int Price { get; set; }
     public string Date { get; set; }
     public string Title { get; set; }
+    private static List<Order> _instances = new List<Order> {};
     
 
     public Order(string _description, int _price, string _date, string _title)
@@ -14,6 +17,14 @@ namespace PierresOrders.Models
       Price = _price;
       Date =_date;
       Title = _title;
+      _instances.Add(this);
     }
+
+    public static List<Order> GetAll()
+    {
+      return _instances;
+    }
+
+
   }
 }

@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using PierresOrders.Models;
 
 namespace PierresOrders.Tests
@@ -114,6 +115,15 @@ namespace PierresOrders.Tests
         string result = updatedTitle;
         //Assert
         Assert.AreEqual(result, newOrder.Title);
+      }
+      [TestMethod]//10
+      public void GetAll_ReturnsEmptyList_OrderList()
+      {
+        List<Order> newList = new List<Order>{};
+
+        List<Order> result = Order.GetAll();
+
+        CollectionAssert.AreEqual(newList, result);
       }
 
 
