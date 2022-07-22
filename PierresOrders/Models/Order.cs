@@ -13,7 +13,7 @@ namespace PierresOrders.Models
       Description = _description;
       Price = _price;
       Date =_date;
-      Title = "Mine";
+      Title = _title;
     }
   }
 }
