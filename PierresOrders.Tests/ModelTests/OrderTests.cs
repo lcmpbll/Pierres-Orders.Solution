@@ -124,6 +124,17 @@ namespace PierresOrders.Tests
 
         CollectionAssert.AreEqual(newList, result);
       }
+      [TestMethod]//11
+      public void GetAll_ReturnsOrders_OrderList()
+      {
+        Order newOrder1 = new Order("Bakery Order", 360, "11/23/33", "Dan's Corner Store");
+        Order newOrder2 = new Order("Pastry Order", 360, "11/23/33", "Dan's Corner Store");
+        List<Order> newList = new List<Order>{newOrder1, newOrder2};
+
+        List<Order> result = Order.GetAll();
+
+        CollectionAssert.AreEqual(newList, result);
+      }
 
 
   }

@@ -8,6 +8,7 @@ namespace PierresOrders.Models
     public int Price { get; set; }
     public string Date { get; set; }
     public string Title { get; set; }
+    // private int Id { get; }
     private static List<Order> _instances = new List<Order> {};
     
 
@@ -18,6 +19,7 @@ namespace PierresOrders.Models
       Date =_date;
       Title = _title;
       _instances.Add(this);
+      // Id = _instances.Count;
     }
 
     public static List<Order> GetAll()
@@ -29,6 +31,8 @@ namespace PierresOrders.Models
     {
       _instances.Clear();
     }
+
+    // public stati
 
   }
 }
