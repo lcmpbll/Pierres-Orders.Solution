@@ -31,6 +31,18 @@ namespace PierresOrders.Tests
       //Assert
       Assert.AreEqual(description, result);
     }
+      [TestMethod] //3
+      public void SetDescription_SetDescription_String()
+      {
+        //Arrange
+        string description = "Bread Order";
+        Order newOrder = new Order(description);
+        //Act
+        string updatedDescription = "Pastry Order";
+        string result = newOrder.Description;
+        //Assert
+        Assert.AreEqual(updatedDescription, result);
+      }
 //     [TestMethod]
 // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
 // {
