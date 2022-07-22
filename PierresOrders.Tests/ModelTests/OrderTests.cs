@@ -44,6 +44,17 @@ namespace PierresOrders.Tests
         //Assert
         Assert.AreEqual(updatedDescription, result);
       }
+      [TestMethod]//4
+      public void GetPrice_ReturnsPrice_Int()
+      {
+        //Arrange
+        int price = 300;
+        Order newOrder = new Order("BreadOrder");
+        //Act
+        int result = newOrder.Price;
+        //Assert
+        Assert.AreEqual(price, newOrder.Price);
+      }
 //     [TestMethod]
 // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
 // {
