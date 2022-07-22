@@ -14,7 +14,7 @@ namespace PierresOrders.Models
     {
       Name = _name;
       Description = _description;
-      Id = 3;
+      Id = _instances.Count;
     }
 
   }

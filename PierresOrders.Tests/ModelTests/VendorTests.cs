@@ -39,14 +39,14 @@ namespace PierresOrders.Tests
 
       Assert.AreEqual(result, description);
     }
-    [TestMethod]
+    [TestMethod]//4
     public void GetId_ReturnsVendorId_Int()
     {
       Vendor newVendor = new Vendor("name", "description");
 
       int result = newVendor.Id;
 
-      Assert.AreEqual(1, result);
+      Assert.AreEqual(0, result);
     }
     
 
