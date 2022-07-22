@@ -17,7 +17,7 @@ namespace PierresOrders.Tests
     [TestMethod] //1
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("Test");
+      Order newOrder = new Order("Test", 1);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
     [TestMethod] //2
@@ -25,7 +25,7 @@ namespace PierresOrders.Tests
     {
       //Arrange
       string description = "Bread Order";
-      Order newOrder = new Order(description);
+      Order newOrder = new Order(description, 1);
       //Act
       string result = newOrder.Description;
       //Assert
@@ -36,7 +36,7 @@ namespace PierresOrders.Tests
       {
         //Arrange
         string description = "Bread Order";
-        Order newOrder = new Order(description);
+        Order newOrder = new Order(description, 1);
         //Act
         string updatedDescription = "Pastry Order";
         newOrder.Description = updatedDescription;
@@ -49,11 +49,11 @@ namespace PierresOrders.Tests
       {
         //Arrange
         int price = 300;
-        Order newOrder = new Order("BreadOrder");
+        Order newOrder = new Order("BreadOrder", 300);
         //Act
         int result = newOrder.Price;
         //Assert
-        Assert.AreEqual(price, newOrder.Price);
+        Assert.AreEqual(price, result);
       }
 //     [TestMethod]
 // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()

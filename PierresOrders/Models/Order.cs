@@ -6,10 +6,10 @@ namespace PierresOrders.Models
     public int Price { get; set; }
     
 
-    public Order(string _description)
+    public Order(string _description, int _price)
     {
       Description = _description;
-      Price = 1;
+      Price = _price;
     }
   }
 }
