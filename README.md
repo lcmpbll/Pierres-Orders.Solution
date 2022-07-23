@@ -1,32 +1,35 @@
-# _Project Name_
+# _Pierres Orders_
 
 #### By _Liam Campbell_
 
 
 
-#### _Description_
+#### _A C# web application for a bakery, to keep track of orders by vendor._
 
 
 
 ## Technologies Used
 
 * _C #_
-* __
-* __
+* _html_
+* _css_
 * __
 * __
 * __
 
 ## Description
 
-_   _
+_This Application allows the user to enter the names and description for a vendor. The user may then add an order to that vendor. The order can contain details such as the price, the date that the order is due, a title, as well as a description of the order._
 
 ## Setup/Installation Requirements
 
-* _Clone the git repository github.com/lcmpbll/ to your desktop_
+* _Clone the git repository https://github.com/lcmpbll/Pierres-Orders.Solutionto your desktop_
 * _Open file in vs code_
-* _Run command dotnet restore from the ProjectName.Test folder_
-* _Run command dotent run in the top level of the project._
+* _Run command dotnet restore from the PierresOrders.Test folder_
+* _Run command dotnet test for testing while in the PierresOrders.Test folder._
+*_Navigate to the PierresOrders folder and run the command dotnet build._
+* _Run command dotnet run in the top level of the in PierresOrders._
+* _Open a browser window and copy paste the local host address into the URL bar._
 
 
 
@@ -39,4 +42,4 @@ _   _
 
 _Feel free to reach out via [Github](github.com.lcmpbll) to provide feedback on this project or to view my other projects._
 
-[Copyright](LICENSE) (c) _06-22-2022_ _Liam Campbell_
+[Copyright](LICENSE) (c) _07-22-2022_ _Liam Campbell_
