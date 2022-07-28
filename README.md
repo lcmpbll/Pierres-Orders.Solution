@@ -27,7 +27,7 @@ _This Application allows the user to enter the names and description for a vendo
 * _Open file in vs code_
 * _Run command dotnet restore from the PierresOrders.Test folder_
 * _Run command dotnet test for testing while in the PierresOrders.Test folder._
-*_Navigate to the PierresOrders folder and run the command dotnet build._
+* _Navigate to the PierresOrders folder and run the command dotnet build._
 * _Run command dotnet run in the top level of the in PierresOrders._
 * _Open a browser window and copy paste the local host address into the URL bar._
 
