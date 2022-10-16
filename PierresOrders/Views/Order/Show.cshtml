@@ -1,18 +1,20 @@
 @{
   Layout="_Layout";
 }
+<div class='container vendor__order-container'>
+  <div class='vendor__order-card'>
+    <h1>@Model["vendor"].Name</h1>
+    <h3>@Model["order"].Title</h3>                     
+    <h3 id="orderShowDate">Order delivery date: @Model["order"].Date</h3>
+  </div>
+  <div class='vendor__order-details'>
+    <h1>Order details:</h1>
 
+    <p>@Model["order"].Description</p>
 
-<h1>@Model["vendor"].Name</h1>
-<h3>@Model["order"].Title</h3>                     
-<h3 id="orderShowDate">Order delivery date: @Model["order"].Date</h3>
-
-
-<h1>Order details:</h1>
-
-<p>@Model["order"].Description</p>
-
-<p>$<u>@Model["order"].Price</u></p>
-
-<p><a href="/">Return to main page</a></p>
-<p><a href="/vendors">View all vendors</a></p>
+    <p>$<u>@Model["order"].Price</u></p>
+  </div>
+  <div class='vendor__order-navigation'>
+    <a href="/vendors"><button class='btn btn-primary'>Vendor List</button></a>
+  </div>
+</div>

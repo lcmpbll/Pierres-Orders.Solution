@@ -1,0 +1,48 @@
+#orderShowDate{
+  position: relative;
+  right: 0px;
+}
+
+body {
+  background-color: rgb(245, 239, 239);
+}
+.header {
+  background: rgb(139, 163, 230);
+  width: 100%;
+  margin-left: 0px;
+}
+
+/* ========Home page CSS ===========*/
+
+.home__description {
+  margin: 3px;
+  padding: 3px;
+}
+.nav__buttons {
+  margin-top: 1rem;
+}
+
+/* ====== VENDORS CSS ======= */
+
+.vendors__header {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 3rem;
+  padding: 2rem;
+  
+}
+
+.vendors__list{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  margin: 1rem 0 1rem;
+  padding: 3px;
+}
+
+.vendors__none{
+  margin: 1rem 0 1rem;
+  padding: 3px;
+}
+
+
