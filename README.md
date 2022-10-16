@@ -6,7 +6,7 @@
 
 #### _A C# web application for a bakery, to keep track of orders by vendor._
 
-
+![App demo](appdemo.png)
 
 ## Technologies Used
 
